@@ -1,0 +1,665 @@
+//=====================================================================html&css===============================================================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashboard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #4c6c76;
+      }
+      #parentDashBoard {
+        border: 2px solid gray;
+        height: 100vh;
+        display: flex;
+      }
+      .leftSide {
+        border: 1px solid black;
+        height: 95vh;
+        width: 25%;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .rightSide {
+        width: 70%;
+        margin: 0px auto 10px;
+        height: 95vh;
+        background-color: gray;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .rightSide ul {
+        list-style: none;
+        display: flex;
+        height: 70px;
+        width: 300px;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .sidebar {
+        /* background-color: rgba(219, 237, 243, 0.87); */
+        height: inherit;
+      }
+      .sidebar ul li {
+        padding: 15px;
+        margin-top: 50px;
+        border: 1px solid;
+        border-radius: 6px;
+        box-shadow: 2px 3px 4px 5px grey;
+        cursor: pointer;
+      }
+      .sidebar ul {
+        list-style: none;
+      }
+      .sidebar ul li:first-child {
+        margin: 0px;
+      }
+      .dbName {
+        color: goldenrod;
+        padding-bottom: 25px;
+        padding-left: 12px;
+      }
+      .navBar {
+        display: flex;
+        border: 0px solid black;
+        height: 70px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 0px 1px 2px 1px;
+      }
+      .navbar nav {
+        height: 70px;
+        width: 30%;
+        border: 3px solid green;
+      }
+      .rightSide button {
+        border: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+      }
+      .card {
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.581);
+        /* width: 300px; */
+        flex: 1;
+        flex-basis: 200px;
+        color: white;
+      }
+      .cardSection {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      footer {
+        height: 40px;
+        border-top: 2px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="parentDashBoard">
+      <article class="leftSide">
+        <aside class="sidebar">
+          <h2 class="dbName">Dash board</h2>
+          <ul>
+            <li>Home</li>
+            <li>Form</li>
+            <li>Table</li>
+            <li>Graphs</li>
+            <li>Configuration</li>
+          </ul>
+        </aside>
+      </article>
+      <article class="rightSide">
+        <!--navbar -->
+        <div class="navBar">
+          <h2>Welcome Admin</h2>
+          <nav>
+            <ul>
+              <li><button>ADD</button></li>
+              <li><button>LOG OUT</button></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- cards -->
+        <section class="cardSection">
+          <div class="card">card</div>
+          <div class="card">card</div>
+          <div class="card">card</div>
+          <div class="card">card</div>
+          <div class="card">card</div>
+          <div class="card">card</div>
+        </section>
+        <footer>
+          <span> &copy; <small>copyright</small> </span>
+        </footer>
+      </article>
+    </section>
+  </body>
+</html>
+
+
+
+
+//=============================================================================================html&css==============================================================================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Blog</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgba(66, 65, 65, 0.932);
+        display: grid;
+        grid-template-rows: 70px 1fr 40px;
+        height: 100vh;
+      }
+      header {
+        background: linear-gradient(
+          45deg,
+          rgb(241, 72, 34),
+          rgb(1, 15, 23),
+          rgb(5, 147, 163)
+        );
+        
+        text-align: center;
+        color: white;
+        box-shadow: 0px 3px 3px 2px grey;
+      }
+      a {
+        text-decoration: none;
+        color: coral;
+        margin-left: 10px;
+        font-style: italic;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      main {
+        border: 1px solid;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        gap: 5%;
+        padding: 20px;
+      }
+      footer {
+        text-align: center;
+        background-color: rgb(48, 110, 110);
+        color: white;
+      }
+      .card {
+        background-color: antiquewhite;
+        border-radius: 10px;
+      }
+       .card:hover{
+        background-color: rgb(229, 228, 226);
+        box-shadow: 2px 2px 3px 4px rgb(137, 135, 135);
+       }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SUBHAM GALAXY..</h1>
+      <a href="">News</a>
+      <a href="">Articles</a>
+      <a href="">Contact</a>
+    </header>
+    <main class="cards">
+      <div class="card">text</div>
+      <div class="card">text</div>
+      <div class="card">text</div>
+      <div class="card">text</div>
+      <div class="card">text</div>
+      <div class="card">text</div>
+    </main>
+    <footer><span>&copy;</span> copyright</footer>
+  </body>
+</html>
+
+
+
+
+=====================================================================================================html&css=============================================================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 180px 160px 180px 180px 180px 180px 180px 180px;
+      }
+      .Box {
+        background-color: rgb(120, 193, 193);
+        height: 150px;
+        width: 140px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 1px;
+      }
+      .Border {
+        background-color: rgb(90, 196, 96);
+        height: 125px;
+        width: 120px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 1px;
+      }
+      .Padding {
+        background-color: rgb(232, 105, 105);
+        height: 165px;
+        width: 149px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+      }
+      .Margin {
+        background-color: rgb(246, 236, 202);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+      }
+      .Round {
+        background-color: rgb(215, 140, 143);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+        border-radius: 10px;
+      }
+      .Shadow{
+        background-color: rgb(204, 236, 235);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+        box-shadow: 0px 3px 3px 1px;
+      }
+      .img{
+        background-color: rgb(204, 236, 235);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+        background-image: url(../../Assets/Images/krishna\ photo.jpeg);
+        background-size: cover;
+      }
+      .Gradiant{
+        background:linear-gradient(45deg, rgb(119, 181, 202),rgb(134, 218, 162),rgb(107, 206, 107)) ;
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+      }
+      .Bord{
+        background-color: rgb(204, 236, 235);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+        background-image: url(../../Assets/Images/krishna\ photo.jpeg);
+        background-size: cover;
+      }
+      
+
+
+    </style>
+  </head>
+  <body>
+    <div class="Content Box">
+      <p>Content Box</p>
+    </div>
+
+    <div class="Border">
+      <p>Border Box</p>
+    </div>
+
+    <div class="Padding">
+        <p>Padding Box</p>
+    </div>
+    <div class="Margin">
+        <p>Margin Box</p>
+    </div>
+    <div class="Round">
+        <p>Round Box</p>
+    </div>
+    <div class="Shadow">
+        <p>Shadow Box</p>
+    </div>
+    <div class="img">
+        <p>Image Box</p>
+    </div>
+    <div class="Gradiant">
+        <p>Gradiant Box</p>
+    </div>
+    <div class="Bord">
+        <p>Border Image Box</p>
+    </div>
+    <div></div>
+  </body>
+</html>
+
+
+//================================================================================================================html&css================================================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 180px 160px 180px 180px 180px 180px 180px 180px;
+      }
+      .Box {
+        background-color: rgb(120, 193, 193);
+        height: 150px;
+        width: 140px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 1px;
+      }
+      .Border {
+        background-color: rgb(90, 196, 96);
+        height: 125px;
+        width: 120px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 1px;
+      }
+      .Padding {
+        background-color: rgb(232, 105, 105);
+        height: 165px;
+        width: 149px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+      }
+      .Margin {
+        background-color: rgb(246, 236, 202);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+      }
+      .Round {
+        background-color: rgb(215, 140, 143);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+        border-radius: 10px;
+      }
+      .Shadow{
+        background-color: rgb(204, 236, 235);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+        box-shadow: 0px 3px 3px 1px;
+      }
+      .img{
+        background-color: rgb(204, 236, 235);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+        background-image: url(../../Assets/Images/krishna\ photo.jpeg);
+        background-size: cover;
+      }
+      .Gradiant{
+        background:linear-gradient(45deg, rgb(119, 181, 202),rgb(134, 218, 162),rgb(107, 206, 107)) ;
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+      }
+      .Bord{
+        background-color: rgb(204, 236, 235);
+        height: 130px;
+        width: 130px;
+        border-color: black;
+        margin: 15px;
+        border: 2px solid;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 1px;
+        background-image: url(../../Assets/Images/krishna\ photo.jpeg);
+        background-size: cover;
+      }
+      
+
+
+    </style>
+  </head>
+  <body>
+    <div class="Content Box">
+      <p>Content Box</p>
+    </div>
+
+    <div class="Border">
+      <p>Border Box</p>
+    </div>
+
+    <div class="Padding">
+        <p>Padding Box</p>
+    </div>
+    <div class="Margin">
+        <p>Margin Box</p>
+    </div>
+    <div class="Round">
+        <p>Round Box</p>
+    </div>
+    <div class="Shadow">
+        <p>Shadow Box</p>
+    </div>
+    <div class="img">
+        <p>Image Box</p>
+    </div>
+    <div class="Gradiant">
+        <p>Gradiant Box</p>
+    </div>
+    <div class="Bord">
+        <p>Border Image Box</p>
+    </div>
+    <div></div>
+  </body>
+</html>
+//============================================================================html&css=================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Login</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .login-container h2 {
+            margin-top: 0;
+            color: black;
+        }
+        
+        .input-field {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        
+        .input-field label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+        
+        .input-field input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        .login-button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .date-time {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #aaa;
+            font-size: 12px;
+        }
+        
+        .top-bar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            text-align: left;
+        }
+        
+        .top-bar .url {
+            margin-left: 10px;
+            color: #ccc;
+        }
+        
+        .top-bar .icons {
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span class="url">google.com</span>
+        <span class="icons">🔒 ⚙ 🔔</span>
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="input-field">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div class="input-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="I">
+        </div>
+        <button class="login-button">Login</button>
+    </div>
+    <div class="date-time">Subhax: Sep 5, 2025, 19:34</div>
+</body>
+</html>

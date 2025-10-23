@@ -1,0 +1,150 @@
+//==========================================================================html==================================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style List</title>
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-image:linear-gradient(to right,red,blue, rgb(201, 24, 24));
+}
+fieldset{
+    background-color: aliceblue;
+    border-radius: 10px;
+    width: 700px;
+    align-items: center;
+    height: 700px;
+    margin:30px auto;
+    box-shadow: 10px 10px 5px 5px rgb(35, 7, 7);
+}
+ul{
+    padding: 5px;
+}
+h1{
+color: blue;
+text-align: center;
+  }
+  ul :first-child{
+    align-items: center;
+    background-color: rgb(255, 123, 0);
+    list-style-type: none;
+    border-radius: 10px;
+    height: 50px;
+    color: aliceblue;
+    width: 500px;
+    height: 50px;
+    margin:  auto;
+    background-size: contain;
+    margin: 10px auto;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top:25px ;
+
+    
+}
+ul :nth-child(2){
+    align-items: center;
+    background-color: rgb(8, 100, 21);
+    list-style-type: none;
+    border-radius: 10px;
+    height: 50px;
+    color: aliceblue;
+    width: 500px;
+    height: 50px;
+    margin:  auto;
+    background-size: contain;
+    margin: 10px auto;
+    font-weight: bold;
+     padding-left: 20px;
+    padding-top:25px ;
+}
+ul :nth-child(3){
+    align-items: center;
+    background-color: rgb(44, 44, 183);
+    list-style-type: none;
+    border-radius: 10px;
+    height: 50px;
+    color: aliceblue;
+    width: 500px;
+    height: 50px;
+    margin:  auto;
+    background-size: contain;
+    margin: 10px auto;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top:25px ;
+}
+ul :nth-child(4){
+    align-items: center;
+    background-color: rgb(11, 104, 23);
+    list-style-type: none;
+    border-radius: 10px;
+    height: 50px;
+    color: aliceblue;
+    width: 500px;
+    height: 50px;
+    margin:  auto;
+    background-size: contain;
+    margin: 10px auto;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top:25px ;
+}
+ul :nth-child(5){
+    align-items: center;
+    background-color: rgb(36, 54, 157);
+    list-style-type: none;
+    border-radius: 10px;
+    height: 50px;
+    color: aliceblue;
+    width: 500px;
+    height: 50px;
+    margin:  auto;
+    background-size: contain;
+    margin: 10px auto;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top:25px ;
+}
+ul :last-child{
+    align-items: center;
+    background-color: rgb(145, 24, 24);
+    list-style-type: none;
+    border-radius: 10px;
+    height: 50px;
+    color: aliceblue;
+    width: 500px;
+    height: 50px;
+    margin:  auto;
+    background-size: contain;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top:25px ;
+}
+</style>
+<fieldset>
+<body>
+    
+    <h1>Task: Style List with :nth-child ()</h1>
+    <ul >
+     <li>li:first-child</li>
+     <li>even</li>
+     <li>odd</li>
+     <li>even</li>
+     <li>odd</li>
+     <li>li:last child</li>
+    </ul>
+
+</body>
+</fieldset>
+</html>
+
+
+
+
+
+
+

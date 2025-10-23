@@ -1,0 +1,293 @@
+//Attribute Selector
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Selector</title>
+    <style>
+      /* attribute selectors
+         */
+      /* 1. here input tags are selected based on attribute name which is 'type' */
+      input[type] {
+        border: 2px solid red;
+      }
+      /* particular input tag will be selected which is having type='text'. (Exact value searching) */
+      input[type="text"] {
+        border: 5px solid greenyellow;
+      }
+      input[placeholder] {
+        border-radius: 20px;
+      }
+      /* Independent attribute selector */
+      [name] {
+        color: green;
+      }
+      button[class="btn"] {
+        padding: 6px 12px;
+      }
+      /* if class names begin with same word, then use the symbol '^' to select elements */
+      div[class^="test"] {
+              background-color: red;
+            }
+
+      /* if class names end with same word, then use the symbol '$' to select elements */
+      div[class$="test"] {
+              color: yellow;
+              font-weight: bolder;
+            }
+
+      div[class^="test123"] {
+              text-decoration: underline;
+            }
+
+      /* if class names are present in different sequence or order , then select those element as substring using a symbol '*' */
+       [class*="m"] {
+              background-color: yellow
+            } 
+       div[class*="test"] {
+        background-color: aqua;
+      } 
+
+      /* It selects a particular word in a given class names to select elements by using symbol '~' */
+      article[class~="Art"] {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="user" />
+      <input type="password" name="pwd" placeholder="" />
+      <input name="age" />
+      <input type="text" id="" placeholder="" />
+      <button class="btn">click Me</button>
+    </form>
+
+    <div class="test">div1</div>
+    <div class="test div">div2</div>
+    <div class="test123 test demo">div3</div>
+    <div class="div test">div4</div>
+
+    <section class="demo">section1</section>
+    <section class="demoSection">section2</section>
+    <section class="secDemo">section3</section> 
+
+    <article class="myArt Art">art1</article>
+    <article class="my Art ele">art2</article>
+    <article class="my Art tag Ar">art2</article>
+  </body>
+</html>
+
+//===============================================================================================================================================================================================================
+//-------------------------------------------------------------------------------------------------Task.Html------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <fieldset>
+    <legend>Background Property Examples</legend>
+
+    <div class="box position">
+        <p>BackGround Position</p>
+    </div>
+
+    <div class="box contain">
+          <p>BackGround Size:Contain</p>
+    </div>
+
+    <div class="box cover">
+     <p>BackGround size:cover</p>
+    </div>
+
+    <div class="box clip">
+      <p>BackGround Clip(Contaion-Box)</p>
+    </div>
+</body>
+</fieldset>
+</html>
+//------------------------------------------------------------------------------------------------------Task.css-------------------------------------------------------------------------------------------------
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+fieldset{
+  background-color: #0d2a3e4e;
+}
+
+
+
+legend {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:rgb(145, 248, 0) ;
+  background-color: #112941;
+  border-radius: 5px;
+}
+
+.box {
+  
+  width: 80%;
+  height: 100px;
+  margin: 15px auto;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Position */
+.position {
+  background: url(../../Assets/Images/cofee\ image.jpeg) no-repeat right;
+  background-size: contain;
+  background-color: #2c3e50;
+}
+
+/* 2. Background Size: contain */
+.contain {
+  background: url(../../Assets/Images/golden_sky\ image.jpg) no-repeat left;
+  background-size: contain;
+  background-color: #3498db;
+}
+
+/* Background Size: cover */
+.cover {
+  background: url(../../Assets/Images/sky\ image.jpg) no-repeat center;
+  background-color: #2c3e50;
+  background-size: cover;
+}
+
+/* 4. Background Clip */
+.clip {
+  padding: 20px;
+  border: 4px solid red;
+  background: rgb(239, 76, 103);
+  border-radius: 10px;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+  color: black;
+}
+//===========================================================================Task2.html===========================================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS Background & Box Model Demo</h1>
+    <h2>BackGround Properties Example</h2>
+
+    <div class="box color">
+      <p>BackGround Color</p>
+    </div>
+
+    <div class="box image">
+      <p>BackGround Repet</p>
+    </div>
+
+    <div class="box Gradient">
+      <p>BackGround Gradient</p>
+    </div>
+</body>
+</html>
+//--------------------------------------------------------------------------------task.css------------------------------------------------------------------------------------------------------------------------
+  .box{
+  
+  width: 80%;
+  height: 100px;
+  margin: 15px auto;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//=============================================================================================Task3.html=========================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Background & Box Model Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #bde8e8;
+      text-align: center;
+    }
+
+    h1 {
+      color: blue;
+      margin-top: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .box {
+      width: 500px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: black;
+      border-radius: 5px;
+    }
+
+    /* Background Color */
+    .color {
+      background-color: pink;
+    }
+
+    /* Background Repeat */
+    .repeat {
+      background-image: url("../../Assets/Images/cofee\ image.jpeg");
+      background-repeat: repeat;
+    }
+
+    /* Background Image (no repeat, cover) */
+    .image {
+      background-image: url("../../Assets/Images/sky\ image.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    /* Solid Color Box */
+    .solid {
+      background-color: teal;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Background & Box Model Demo</h1>
+  <h3>Background Properties Examples</h3>
+
+  <div class="container">
+    <div class="box color">Background Color</div>
+    <div class="box repeat">Background Repeat</div>
+    <div class="box image">Background Image</div>
+    <div class="box solid">Background Color</div>
+  </div>
+
+</body>
+</html>

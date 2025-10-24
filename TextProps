@@ -1,0 +1,115 @@
+//class-25/08/25
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      h2 {
+        color: greenyellow;
+        background-color: black;
+        font-style: italic;
+      }
+      th {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      section {
+        background-color: yellow;
+      }
+    </style>
+    <!-- inline style -->
+    <h1 style="color: blue; background-color: red; font-style: italic">
+      Welcome to CSS
+    </h1>
+    <!-- Internal style sheet  -->
+    <h2>Internal style sheet</h2>
+
+    <!-- External Style Sheet -->
+    <h3>External Style Sheet</h3>
+
+    <div style="border: 1px solid red">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, veritatis
+        facere, praesentium repudiandae, perferendis ipsam quidem eos
+        <span style="color: orange">CSS</span>
+        voluptatibus nostrum id est sunt? Veritatis voluptatibus laborum, nisi
+        sit perferendis rerum.
+      </p>
+    </div>
+    <table border="2">
+      <tr>
+        <th style="color: red">heading</th>
+        <th style="color: red">heading</th>
+        <th style="color: red">heading</th>
+      </tr>
+      <tr>
+        <td>text</td>
+        <td>text</td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <td>text</td>
+        <td>text</td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <td>text</td>
+        <td>text</td>
+        <td>text</td>
+      </tr>
+    </table>
+
+    <section>I am section tag</section>
+
+    <h5>I m h5 tag</h5>
+  </body>
+</html>
+============================================textprops
+TextProps.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-style: double;
+        text-transform: capitalize;
+        text-shadow: 4px 6px 8px red;
+        font-size: 50px;
+        font-family: monospace;
+      }
+      p {
+        text-indent: 100px;
+      }
+      span {
+        font-size: 40px;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>head1</h1>
+    <p>
+      <span style="font-size: 100px">L</span>orem ipsum dolor sit amet,
+      consectetur adipisicing elit. Ducimus sapiente placeat quam pariatur.
+      Ipsum accusamus aperiam velit obcaecati. Laborum debitis distinctio eaque
+      veniam aspernatur repellat quo voluptate ipsum reiciendis autem?
+    </p>
+    <pre>
+        e4rsdfgchjiuoytfgdx
+    </pre>
+    <span>text</span>
+  </body>
+</html>

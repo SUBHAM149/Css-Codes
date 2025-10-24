@@ -1,0 +1,615 @@
+class-12/09/25
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>3D Flip Card</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #121212;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        perspective: 1000px;
+      }
+
+      .card-container {
+        width: 300px;
+        height: 400px;
+        perspective: 1500px;
+      }
+
+      .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+      }
+
+      .card-container:hover .card {
+        transform: rotateY(180deg);
+      }
+
+      .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      .card-front {
+        background: linear-gradient(135deg, #d4b330, #8f94fb);
+        color: rgb(21, 19, 19);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .card-back {
+        background: linear-gradient(135deg, #35cea8, #ff7eb3);
+        transform: rotateY(180deg);
+        color: rgb(23, 21, 21);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-face card-front">
+          <h2>Welcome</h2>
+          <p>Hover to reveal more!</p>
+        </div>
+        <div class="card-face card-back">
+          <h2>Hey! I am SUBHAM</h2>
+          <p>This is the back of the 3D card.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+=====================================fixedandSticky================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fixed and sticky</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        grid-template-rows: 80px 1fr 40px;
+        /* height: 100vh; */
+      }
+      header {
+        background-color: coral;
+        color: white;
+        position: sticky;
+        top: 0px;
+        box-shadow: 0px 1px 1px 1px white;
+      }
+      main {
+        background-color: grey;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 20%;
+        padding: 10px;
+        gap: 10px;
+      }
+      footer {
+        background-color: black;
+        color: white;
+      }
+      .leftSideBlock {
+        text-align: justify;
+      }
+      .advt {
+        position: fixed;
+      }
+      footer {
+        text-align: center;
+        font-style: italic;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .logo {
+        height: 80px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+      }
+      /* cards*/
+      .cardDepth {
+        perspective: 600px;
+        height: 300px;
+        width: 250px;
+        background-color: gray;
+      }
+      .card {
+        height: 100%;
+        width: 100%;
+        background-color: yellow;
+        transform-style: preserve-3d;
+        transition: transform 2s;
+      }
+      .cardDepth:hover .card {
+        transform: rotateY(180deg);
+      }
+      .cardFace {
+        height: 100%;
+        width: 100%;
+        background-color: red;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+      video {
+        object-fit: cover;
+      }
+      .front {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+        background: coral;
+      }
+      .front h2 {
+        font-size: 15px;
+        white-space: nowrap;
+        font-style: italic;
+      }
+      .front p {
+        white-space: nowrap;
+        font-size: 8px;
+        font-family: monospace;
+        color: black;
+      }
+      .back {
+        background-color: orange;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="../../ASSETS/images/A_logo.jpeg"
+          alt=""
+          height="60px"
+          width="60px"
+          style="border-radius: 50%"
+        />
+      </div>
+      <div class="menu">MenuBlock</div>
+      <div class="auth">authBlock</div>
+    </header>
+    <main>
+      <article class="leftSideBlock">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quasi
+        tempore optio recusandae quis magnam sequi exercitationem? Aliquam
+        quidem pariatur rerum natus, iusto enim magnam eligendi accusantium
+        molestiae itaque illo! Modi non, architecto consequuntur voluptatem
+        necessitatibus officiis nemo cum, quisquam veritatis facere inventore id
+        iure nam harum cupiditate veniam ad sapiente deserunt aut reiciendis
+        dolorem? Temporibus soluta beatae sapiente! Autem. Ex veritatis facere
+        officia quod quam repellendus commodi maiores culpa accusamus fuga
+        aliquam quisquam esse repudiandae temporibus, sint quas doloribus
+        consectetur eveniet inventore quia eligendi dignissimos ad! Laboriosam,
+        vel quas. Eaque, nobis ea provident quibusdam, beatae recusandae, vero
+        at reiciendis qui est eum a culpa quidem perferendis id! Ipsam possimus
+        illum provident aliquid iusto, vero repellendus animi libero ipsum
+        reprehenderit. Ad inventore, praesentium ab numquam eveniet esse magnam
+        accusantium? Soluta quia deleniti deserunt hic inventore! Quaerat
+        nesciunt architecto inventore ratione, commodi unde minima voluptates
+        natus quo eaque aliquid cum porro? Sapiente libero quidem excepturi quam
+        consectetur aperiam, a soluta et totam perspiciatis possimus explicabo
+        cupiditate odit veritatis consequatur architecto blanditiis itaque
+        asperiores in minus vero eius modi laboriosam! Molestias, non.
+        Inventore, iure! Necessitatibus reprehenderit molestiae at quas. Dolorem
+        animi quasi delectus dolore debitis, eligendi, harum sed saepe ex,
+        incidunt facilis quos velit corporis quam laboriosam? Consequatur
+        dolores in iure itaque. Illum atque at animi similique sunt,
+        voluptatibus officia suscipit nesciunt quam, dolorem odio accusamus.
+        Facere eum, fugiat esse quasi quo dolores, culpa sint ad, minima
+        aspernatur autem veritatis id cumque. Provident iste sit debitis
+        corrupti optio eveniet animi voluptatem eius quibusdam. Quae, tempora.
+        Tempora optio amet deleniti laudantium doloribus, perspiciatis iusto,
+        vitae excepturi vero iste nulla consequuntur natus delectus animi.
+        Exercitationem est ipsam explicabo amet ullam voluptate architecto, sunt
+        sed molestias voluptatibus ipsum modi doloribus vel fugit quod velit!
+        Maiores enim dignissimos neque vero provident placeat, exercitationem
+        esse eaque veritatis. Reprehenderit quisquam itaque ipsum delectus a.
+        Aut asperiores nobis laudantium rerum, distinctio tempora impedit nulla
+        voluptate nostrum maiores pariatur tenetur quis modi magni, fugiat hic
+        vero incidunt unde. Est, perferendis! Eligendi voluptatem error dolores
+        assumenda eaque repudiandae ab quis impedit odit ipsam reiciendis
+        deserunt, incidunt debitis, ratione, provident perferendis consectetur!
+        Eius reiciendis deserunt hic minima iure suscipit. Voluptatibus,
+        voluptas totam? Esse possimus incidunt voluptate saepe minima reiciendis
+        minus doloribus ratione veniam fugiat mollitia, provident molestias
+        accusamus vitae praesentium amet sint ullam eos ex, blanditiis pariatur
+        dolore voluptatum ipsum molestiae! Illum. Repudiandae dolor assumenda
+        unde, labore commodi distinctio facere architecto placeat natus. Ipsa
+        tempora velit consectetur veritatis quam provident voluptatibus quis
+        pariatur perferendis consequuntur. Aut odio consequuntur harum
+        reprehenderit! Repellendus, in! Dicta minus quos a laboriosam, non,
+        tempore numquam odio maxime architecto similique dolore assumenda et
+        soluta dolor tempora, dolorem cupiditate repellat aut commodi quaerat.
+        Error eveniet ipsum itaque quo eum. Magni nostrum omnis eius rem, quis
+        officiis explicabo ea vel cumque ducimus laboriosam iure, atque nisi
+        tempore itaque, animi aliquam illo. Alias assumenda, cupiditate
+        molestias qui id aliquam cum esse! Consequuntur consequatur, assumenda
+        minus impedit perferendis expedita animi ullam vero hic tenetur numquam
+        sunt. Itaque dolorum blanditiis ab, laboriosam ipsam facere illum, quas
+        nesciunt officia expedita officiis corporis saepe adipisci? Voluptatum
+        repellendus voluptatem omnis laudantium tenetur error nihil doloribus
+        magnam obcaecati? Excepturi earum quas veniam placeat error dolorem
+        accusantium maiores facere? Qui nostrum, reprehenderit recusandae quos
+        magni placeat beatae quas? Repellat iusto nesciunt, sint assumenda
+        possimus tenetur sapiente necessitatibus esse nostrum, saepe libero,
+        ipsum incidunt cumque nobis iste sunt impedit! Officia iste rem incidunt
+        commodi laborum facere ipsa animi tenetur? Voluptatum harum totam error
+        id ex eos neque. Quo minus, laborum excepturi cum vero explicabo, harum
+        odio quaerat facilis placeat sequi, voluptatibus autem voluptas repellat
+        dolorem adipisci rem! Modi, nostrum? Molestias et nemo incidunt, ipsum
+        culpa laudantium sunt impedit adipisci eligendi minus! Sed, temporibus
+        assumenda quisquam laborum consequatur exercitationem sint accusantium
+        mollitia obcaecati aut debitis neque repellat ratione dolor laboriosam.
+        Libero optio culpa explicabo officiis corporis dolor at velit, deserunt
+        odit. Aspernatur, fuga sunt obcaecati iste mollitia ab explicabo
+        distinctio deserunt optio accusantium. Optio possimus nesciunt
+        exercitationem iusto doloribus dignissimos? Facere aspernatur
+        consectetur nam accusantium incidunt harum quibusdam deserunt rem? Ad
+        repudiandae odio eaque nostrum, harum nam corporis vitae. Cupiditate at
+        quo facere accusamus possimus quas ab iure ea non. Repudiandae deleniti
+        quaerat illum dolor placeat molestias autem eius reiciendis? Eum, eius
+        perferendis delectus iusto quaerat necessitatibus. Officiis sapiente
+        aliquid obcaecati suscipit quisquam aspernatur cumque, rerum, tempore,
+        eligendi accusamus debitis. Iste, suscipit! Eaque officiis quod harum
+        maiores, delectus ea necessitatibus, veniam ratione distinctio error
+        reprehenderit atque repellat tempora sint consectetur reiciendis dolore
+        doloremque aliquam neque optio quo! Odit, eligendi labore. Ducimus
+        architecto vero tenetur id molestias! Possimus eligendi saepe, quae
+        nobis asperiores ad cum iusto laboriosam hic rem delectus adipisci eaque
+        libero fuga maiores distinctio et dolores praesentium! Labore, impedit!
+        Explicabo molestias magnam sapiente? Assumenda, at harum adipisci quia
+        nemo consequuntur libero suscipit maxime recusandae voluptatibus
+        explicabo voluptas nulla voluptatem ducimus temporibus alias accusamus
+        ullam. Excepturi pariatur ea reiciendis est. Facilis obcaecati tenetur
+        voluptate quos quod nulla libero cum deleniti aspernatur reprehenderit
+        facere consequatur ipsum magni, cupiditate laudantium, eos aliquid
+        aperiam numquam, ratione optio incidunt praesentium dolorum! Nemo,
+        ratione tenetur. Molestias quae cumque quis quos nostrum aliquid vero
+        corporis odit? Fuga repellat corrupti aut, alias optio rem harum?
+        Officiis, adipisci. Culpa qui magnam, illum labore eveniet laboriosam
+        maxime aliquid quidem. Laborum vitae ab laudantium harum obcaecati
+        accusamus at autem dolore eius ea, facilis necessitatibus explicabo
+        porro? Illo odit facilis accusamus atque ratione, expedita doloribus et
+        quis nostrum, placeat iure fugiat. Libero fugit inventore, atque tempora
+        totam rem aspernatur. Inventore nihil amet porro reiciendis culpa
+        sapiente qui, sint quidem alias earum pariatur quae nulla. Fuga
+        explicabo cumque reprehenderit porro recusandae delectus. Et laborum ut
+        commodi ab id suscipit obcaecati ipsum, voluptas expedita dolorem earum
+        alias eaque asperiores nisi provident. At, eveniet eum. Debitis tempore
+        omnis, facilis nemo molestiae corporis impedit ducimus. Recusandae,
+        eaque? Ipsum adipisci necessitatibus nostrum dolor consectetur. Earum
+        fugit facilis hic maxime dignissimos veritatis harum. Id quas ratione
+        molestias nam ex enim ipsum vitae. Earum fugit quidem minima dolorem.
+        Distinctio incidunt accusamus necessitatibus consequuntur optio
+        quibusdam, est assumenda ex quia minima! Magnam fugit, tenetur dicta
+        amet ut sunt earum expedita iure quod quaerat veniam perferendis quidem
+        tempora, dolorum aliquam. Totam quos repellat id eius excepturi
+        perspiciatis dignissimos. Totam dolore veritatis facilis? Vel, tenetur!
+        Porro molestias ex id fugit rerum animi optio nostrum, impedit
+        reiciendis ab voluptates, expedita provident veritatis!
+      </article>
+      <article class="rightSideBlock">
+        <aside class="advt">
+          <figure>
+            <img
+              src="../../ASSETS/images/A_logo.jpeg"
+              alt=""
+              width="50%"
+              height="50%"
+            />
+            <figcaption>Naresh IT</figcaption>
+          </figure>
+
+          <!-- card rotation -->
+          <div class="cardDepth">
+            <div class="card">
+              <!-- front side  -->
+              <div class="cardFace front">
+                <h2>Welcome to 'A' techlogies</h2>
+                <p>Hover on this card for more details</p>
+              </div>
+
+              <!-- backside -->
+              <div class="cardFace back">
+                <video controls width="100%" height="100%" autoplay loop>
+                  <source
+                    src="../../Assets/videos/4114797-uhd_3840_2160_25fps.mp4"
+                    type=""
+                  />
+                </video>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </article>
+    </main>
+    <footer><code>&copy;</code>copyright 2025 All rights Reserved</footer>
+  </body>
+</html>
+==============================================MyAwesomeBlog=========================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f7fa;
+        color: #333;
+      }
+
+      header {
+        background: #fff;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #007bff;
+      }
+
+      .container {
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .container h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+      }
+
+      .articles {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background: #fff;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: left;
+      }
+
+      .card-image {
+        background: #ccc;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      .card-image img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+
+      .card-content h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .meta {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 15px;
+      }
+
+      .card-content p {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .card-content a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      .card-content a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background: #908b8b;
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Awesome Blog</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>Latest Articles</h2>
+      <div class="articles">
+        <div class="card">
+          <div class="card-image">
+            <img src="../../Assets/Images/we.png" alt="Web Development" />
+          </div>
+          <div class="card-content">
+            <h3>The Future of Web Development</h3>
+            <p class="meta">By John Doe | August 2, 2025</p>
+            <p>
+              A deep dive into the latest trends and technologies shaping the
+              web. From AI to serverless functions, find out what's next.
+            </p>
+            <a href="#">Read more →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="../../Assets/Images/css.jpg"
+              alt="Web Development"
+            />
+          </div>
+          <div class="card-content">
+            <h3>Mastering CSS Grid Layouts</h3>
+            <p class="meta">By Jane Smith | July 29, 2025</p>
+            <p>
+              A comprehensive guide to CSS Grid, helping you build complex and
+              responsive layouts with ease. Includes practical examples.
+            </p>
+            <a href="#">Read more →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../../Assets/Images/js framwork.jpg" alt="Web Development" />
+          </div>
+          <div class="card-content">
+            <h3>Introduction to JavaScript Frameworks</h3>
+            <p class="meta">By Alice Williams | July 25, 2025</p>
+            <p>
+              Choosing the right framework can be tricky. This article breaks
+              down the basics of React, Vue, and Angular for beginners.
+            </p>
+            <a href="#">Read more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>© 2025 My Awesome Blog. All rights reserved.</footer>
+  </body>
+</html>
+===========================================transferhtml==================
+transform.html
+============================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: aquamarine;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+        color: white;
+        /* moving box w.r.to X-axis */
+        /* transform: translateX(50px); */
+        /* moving box w.r.to Y-axis */
+        /* transform: translateY(100px); */
+        /* short-hand prop for both X and Y direction */
+        /* transform: translate(50px, 100px); */
+        /* for zoom effects use scale() method */
+        /* transform: scale(1.5);
+        transform: scaleX(1.5);
+        transform: scaleY(1.5); */
+      }
+      
+      .box2 {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+  </body>
+</html>

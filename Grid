@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      section {
+        background-color: rgb(41, 148, 112);
+        display: grid;
+        /* grid-template-columns: 200px 200px 200px; */
+        grid-template-columns: repeat(
+          4,
+          1fr
+        ); /*syntax: repeat(noOfCols,widthOfCol) */
+        gap: 20px;
+      }
+      div {
+        padding: 30px;
+        color: rgb(255, 221, 0);
+        border:  solid 5px ;
+        border-color: rgb(214, 185, 21);
+        border-radius: 5px;
+        background: linear-gradient(45deg,red,blue);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+      <div>text</div>
+        
+    </section>
+  </body>
+</html>
+===============================================================================================grid2======================================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      section {
+        background-color: blue;
+        border: 1px solid red;
+        height: 100vh;
+        display: grid;
+        /* grid-template-rows: 30px 40px 40px 50px 50px; */
+        /* grid-template-rows: repeat(5, 1fr); */
+        /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+        /* grid-auto-flow: row; */
+        grid-auto-flow: column;
+        gap: 10px;
+      }
+      a {
+        border: 1px solid green;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <a href="">link</a><a href="">link</a><a href="">link</a
+      ><a href="">link</a><a href="">link</a>
+    </section>
+  </body>
+</html>
+==========================================================================================================grid3=============================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table grid</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      section {
+        height: 70vh;
+        background-color: grey;
+        display: grid;
+        /* grid-auto-flow: column; */
+        grid-template-columns: repeat(3, 1fr);
+        /* gap: 10px; */
+        padding: 20px;
+      }
+      div {
+        background-color: rgb(255, 162, 0);
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- grid-column and grid-row both are short hand props -->
+    <section>
+      <div style="grid-column: 1 / span 2">table cell 0</div>
+      <div>table cell 1</div>
+      <!-- grid-column : 1/4 ; is short hand prop for grid-column-start: 1; grid-column-end: 4 -->
+      <div style="grid-column-start: 1; grid-column-end: 4">table cell 2</div>
+      <div>table cell 3</div>
+      <div>table cell 4</div>
+      <div style="grid-row: 4 / span 2">table cell 5</div>
+      <div>table cell 6</div>
+      <div>table cell 7</div>
+      <div>table cell 8</div>
+    </section>
+  </body>
+</html>
+=============================================================================grid4===================================
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        position: sticky;
+        top: 0px;
+        background-color: blue;
+        color: white;
+      }
+      div {
+        height: 250px;
+        border: 2px solid red;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>position: sticky</h1>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+      <p>text</p>
+    </div>
+  </body>
+</html>
+========================================lab1===============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table grid</title>
+    <style>
+      body {
+        background-color: rgb(231, 214, 214);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      section {
+        position: relative;
+        top: 80px;
+        height: 100vh;
+        background: linear-gradient(rgb(220, 182, 32),rgb(0, 255, 157),rgb(174, 14, 30));
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px;
+        gap: 10px;
+        width: 550px;
+        margin: auto;
+        border-radius: 10px;
+      }
+      div {
+        background-color: rgb(255, 162, 0);
+        color: rgb(249, 244, 244);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #a1 {
+        background-color: red;
+        border-radius: 10px;
+      }
+      #a2 {
+        background-color: rgb(61, 116, 46);
+        border-radius: 10px;
+      }
+      #a3 {
+        background-color: rgb(21, 0, 255);
+        border-radius: 10px;
+      }
+      #a4 {
+        background-color: rgb(68, 0, 255);
+        border-radius: 10px;
+      }
+      #a5 {
+        background-color: rgb(68, 0, 255);
+        border-radius: 10px;
+      }
+      #a6 {
+        background-color: rgb(255, 174, 0);
+        border-radius: 10px;
+      }
+      #a7 {
+        background-color: rgb(68, 0, 255);
+        border-radius: 10px;
+      }
+      #a8 {
+        background-color: rgb(68, 0, 255);
+        border-radius: 10px;
+      }
+      #a9 {
+        background-color: rgb(68, 0, 255);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- grid-column and grid-row both are short hand props -->
+    <!--"grid-column-start: 1; grid-column-end: 4"-->
+    <section>
+      <div style="grid-column: 1 / span 2" id="a1">
+        item 1( Spans 2 Columns)
+      </div>
+      <div id="a4">item 2</div>
+      <!-- grid-column : 1/4 ; is short hand prop for grid-column-start: 1; grid-column-end: 4 -->
+      <div style="grid-row: 2 / span 2" id="a2">item 5( Spans 2 Rows)</div>
+      <div id="a3">item 3</div>
+      <div id="a5">item 4</div>
+      <div style="grid-column: 2 / span 2" id="a6">item 9( Span 2 Columns)</div>
+      <div id="a7">item 6</div>
+      <div id="a8">item 7</div>
+      <div id="a9">item 8</div>
+    </section>
+  </body>
+</html>
+=====================================================lab2=============================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Sidebars Layout</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #e6e6e6;
+        overflow: hidden;
+      }
+
+      header,
+      footer {
+        background: linear-gradient(45deg, red, blue);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      footer {
+        background: #444;
+        font-size: 1em;
+      }
+
+      nav {
+        position: fixed;
+        top: 80px;
+        bottom: 50px;
+        left: 0;
+        width: 200px;
+        background: #444;
+        color: white;
+        padding: 20px;
+        overflow-y: auto;
+      }
+
+      nav a {
+        display: block;
+        text-decoration: none;
+        background: #666;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        background: #555;
+      }
+
+      aside {
+        position: fixed;
+        top: 80px;
+        bottom: 50px;
+        right: 0;
+        width: 250px;
+        background: #ddd;
+        padding: 20px;
+        overflow-y: auto;
+      }
+
+      .main-container {
+        position: absolute;
+        top: 80px;
+        bottom: 50px;
+        left: 200px;
+        right: 250px;
+        overflow-y: auto;
+        background: white;
+        padding: 20px;
+      }
+
+      @media (max-width: 768px) {
+        nav,
+        aside {
+          position: static;
+          width: 100%;
+          height: auto;
+        }
+
+        header,
+        footer {
+          position: static;
+        }
+
+        .main-container {
+          position: static;
+          padding: 10px;
+          overflow: visible;
+        }
+
+        body {
+          overflow: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>My Awesome Website</header>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="main-container">
+      <h2>Welcome to Our Page!</h2>
+      <p>
+        This is a demo of a layout with fixed sidebars and a scrollable main
+        area.
+      </p>
+      <p>Resize the browser window to see the responsive behavior.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam delectus
+        atque consequuntur dolores aliquid tenetur rem quaerat, enim voluptates?
+        Ex rem eveniet fugiat accusamus sequi, inventore suscipit voluptatum
+        esse minima.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ab
+        quidem quia error, blanditiis aliquam perferendis doloribus perspiciatis
+        id? Est necessitatibus tempore alias nostrum delectus sint tempora quia
+        possimus sunt?
+      </p>
+      <p>
+        HTML, CSS, and JavaScript are the foundational pillars of modern web
+        development, each serving a distinct yet interconnected role in creating
+        interactive and visually appealing websites. HTML (HyperText Markup
+        Language) provides the fundamental structure and content of a webpage,
+        acting as the "skeleton" that defines elements like headings,
+        paragraphs, images, and links using a system of tags. CSS (Cascading
+        Style Sheets) is responsible for the visual presentation and styling of
+        the HTML elements. It dictates the aesthetics of a webpage, controlling
+        aspects such as colors, fonts, layout, spacing, and responsive design,
+        transforming the raw HTML structure into a polished and visually
+        engaging user interface. JavaScript adds dynamic functionality and
+        interactivity to a webpage, bringing the static structure and styling to
+        life. It enables features like animated elements, form validation,
+        interactive maps, dynamic content updates, and complex user
+        interactions, making websites engaging and responsive to user input.
+        Together, these three languages form a powerful trio, allowing
+        developers to build everything from simple static pages to complex,
+        feature-rich web applications.
+      </p>
+    </div>
+
+    <aside>
+      <h3>Recent Posts</h3>
+      <ul>
+        <li>Grid Layout Tips</li>
+        <li>Responsive Design</li>
+        <li>Web Performance</li>
+        <li>Modern CSS</li>
+      </ul>
+
+      <h3>Categories</h3>
+      <ul>
+        <li>Tutorials</li>
+        <li>News</li>
+        <li>Reviews</li>
+      </ul>
+    </aside>
+
+    <footer>&copy; 2025 CSS Grid Layout Demo</footer>
+  </body>
+</html>

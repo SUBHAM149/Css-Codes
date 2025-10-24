@@ -1,0 +1,63 @@
+html---------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainBox">
+        <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box box1"></div>
+    </div>
+</body>
+</html>
+css----------------
+/* .box{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    /* position: static; */
+    /*position: relative;
+    /* left: 100px;
+    top: 100px; */
+    /* right: 50px;
+    bottom:50px; */
+    /*bottom: 0px;
+
+} */
+ body{
+    height: 1000vh;
+ }
+ /* .box{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    /* position: absolute; */
+   /* position: fixed;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 50%;
+ } */
+   .box{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 0, 0);
+    /* position: absolute; */
+   
+ }
+ .mainBox{
+    border: 2px solid green;
+    height: 500px;
+    width: 200px;
+ }
+ .box1{
+    background-color: blue;
+     position: sticky;
+    top:100px;
+    border-radius: 50%;
+ }

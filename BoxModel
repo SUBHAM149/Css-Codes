@@ -1,0 +1,96 @@
+//class-29/09/25
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #box {
+           height: 250px;  
+           width: 250px;
+           border-style: solid;
+           border-top-width: 5px;
+           border-color: blue;
+           padding-top: 40px;
+           padding-left: 60px;
+           padding-right: 30px;
+           padding-bottom: 10px;
+           border-radius: 10px;
+          
+        }
+    </style>
+    <div id="box">
+     data
+    </div>
+</body>
+</html>
+-------------------------------idcard
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID card</title>
+    <style>
+      #card {
+        border: 2px solid #ef9110;
+        width: 260px;
+        /* height: 340px; */
+        background-color: #ef9110;
+        color: white;
+        border-radius: 25px;
+      }
+      article {
+        width: 90%;
+        height: inherit;
+        margin: auto;
+        text-align: center;
+      }
+      img {
+        border-radius: 50%;
+        width: ;
+        border: 5px solid;
+      }
+      button {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 10px;
+      }
+      a {
+        text-decoration: none;
+        font-weight: bolder;
+        color: red;
+      }
+      a:hover {
+        background-color: red;
+        color: white !important;
+      }
+      button:hover {
+        background-color: red;
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="card">
+      <article>
+        <h2 style="color: rgb(245, 35, 35)">Naresh iT</h2>
+        <figure>
+          <img src="../../Assets/Images/007.jpg" alt="" />
+        </figure>
+        <p style="line-height: 32px">
+          <span> <i>SUBHAM BEHERA</i> </span><br />
+          <span>ID: J05</span>
+          <br />
+          <button>
+            <a href="">Profile</a>
+          </button>
+        </p>
+      </article>
+    </section>
+  </body>
+</html>
+---------------------------

@@ -1,0 +1,475 @@
+//class-11/09/25
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: rgb(24, 10, 10);
+        }
+        body {
+            background-color: rgba(17, 24, 3, 0.775);
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 50px;
+        }
+        .bar {
+            height: 150px;
+            width: 70px;
+            border: 2px solid;
+            
+            background: linear-gradient(yellow,green,blue);
+            text-align: center;
+            transition: height 2s;
+        }
+        .ease {
+            transition-timing-function: ease;
+        }
+        .ease-in {
+            transition-timing-function: ease-in;
+        }
+        .ease-out {
+            transition-timing-function: ease-out;
+        }
+        .linear {
+            transition-timing-function: linear;
+        }
+        body:hover .bar {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bar ease">ease effect</div>
+    <div class="bar ease-in">ease-in effect</div>
+    <div class="bar ease-out">ease-out effect</div>
+    <div class="bar linear">linear effect</div>
+</body>
+</html>
+============================================================transition2==============
+ex2ForTransition.html
+=========================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+      body {
+        background-color: black;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 50px;
+      }
+      .bar {
+        height: 150px;
+        width: 70px;
+        background: rgb(255, 149, 0);
+        text-align: center;
+        border-radius: 9px;
+        background-image: url();
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: height 2s, background 2s, width 2s, border-radius 2s,
+          background-image 2s, background-repeat 2s, background-size 2s;
+      }
+      .ease {
+        transition-timing-function: ease;
+      }
+      .ease-in {
+        transition-timing-function: ease-in;
+      }
+      .ease-out {
+        transition-timing-function: ease-out;
+      }
+      .linear {
+        transition-timing-function: linear;
+      }
+      body:hover .bar {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, red, black, blue);
+        background-image: url("../../ASSETS/images/dinga.jpeg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bar ease">ease effect</div>
+    <div class="bar ease-in">ease-in effect</div>
+    <div class="bar ease-out">ease-out effect</div>
+    <div class="bar linear">linear effect</div>
+  </body>
+</html>
+===================================================photobloghtml===============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhotoBlog</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(45deg, red, blue, black);
+        color: #dfd6d6;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        background-color: #f16c06;
+        border-radius: 3px;
+        padding: 10px;
+      }
+
+      nav ul li a:hover {
+        color: #131314;
+      }
+
+      .hero {
+        background: url("../../Assets/Images/Bgimg.jpg") no-repeat
+          center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+      }
+
+      .hero h2 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 700px;
+      }
+
+      .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px;
+        gap: 40px;
+      }
+
+      .about-section img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 10);
+        
+      }
+
+      .about-text {
+        max-width: 500px;
+      }
+
+      .about-text h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .about-text p {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .about-section {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 20px;
+        }
+        .about-text {
+          max-width: 100%;
+        }
+      }
+      .gallery {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .gallery h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 10);
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>PhotoBlog</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <h2>Capturing Moments, Creating Memories</h2>
+      <p>
+        Welcome to my photography blog. Explore stories told through the lens —
+        nature, portraits, travel, and much more.
+      </p>
+    </section>
+
+    <section id="about" class="about-section">
+      <img src="../../Assets/Images/007.jpg" alt="Photographer" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+         Hello! I'm a passionate photographer who loves to capture emotions,
+          landscapes, and special moments. Photography for me is more than just
+          clicking a picture — it’s about telling a story that lasts forever.
+          
+        </p>
+      </div>
+    </section>
+     <section class="gallery">
+    <h2>My Gallery</h2>
+    <div class="gallery-container">
+      <img src="../../Assets/Images/bird.jpeg" alt="1">
+      <img src="../../Assets/Images/flower.jpeg" alt="2">
+      <img src="../../Assets/Images/car.jpeg" alt="3">
+      <img src="../../Assets/Images/sky image.jpg" alt="4">
+      <img src="../../Assets/Images/Mayr.jpeg" alt="5">
+      <img src="../../Assets/Images/elephant.jpeg" alt="6">
+      <img src="../../Assets/Images/golden_sky image.jpg" alt="7">
+      <img src="../../Assets/Images/krishna image.jpeg" alt="8">
+      <img src="../../Assets/Images/lion2.jpeg" alt="9">
+      <img src="../../Assets/Images/bird2.jpeg" alt="10">
+    </div>
+    </section>
+
+  </body>
+</html>
+========================================Overaly+================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay popup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: grid;
+            grid-template-rows: 80px 1fr 40px;
+        }
+        header {
+            background-color: rgb(9, 17, 238);
+            color: rgb(148, 167, 184);
+            text-align: center;
+            
+        }
+        main {
+            background-color: rgba(133, 76, 204, 0.611);
+            color: rgb(201, 201, 218);
+        }
+        footer {
+            background-color: rgb(230, 170, 18);
+            color: black;
+        }
+        .overlay {
+            height: 100vh;
+            background: gray;
+            position: fixed;
+            top: 80px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            padding-top: 100px;
+            transition: opacity 1s linear, display 1s linear;
+            transition-behavior: allow-discrete;
+        }
+        .popup {
+            background: white;
+            height: 220px;
+            width: 470px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 100px;
+            padding: 30px;
+            box-shadow: 2fx 2fx 1fx 1fx rgb(49, 47, 47);
+        }
+        .btn {
+            border: 1px solid;
+            color: white;
+            background: blueviolet;
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 7px;
+            font-weight: bold;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+        }
+        #toggle:checked~ .overlay {
+            opacity: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>navbar</header>
+    <main>main content <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure pariatur voluptatum assumenda quam voluptatibus qui hic natus architecto amet iusto, at laudantium eligendi aliquam quaerat rem labore eum debitis provident.
+    Esse numquam sapiente unde cum mollitia soluta omnis iure odio repellendus ab autem cupiditate, consequuntur incidunt? Culpa consequuntur est, deserunt iure natus soluta distinctio, eligendi ducimus ut modi aliquam mollitia.
+    Magni necessitatibus ad, eum veritatis sed possimus quas praesentium eveniet, quidem ex veniam atque inventore quae corrupti. Officiis doloribus sunt, magni quibusdam modi corrupti vitae omnis delectus, error suscipit eius.
+    Dicta architecto ut natus, magnam odio voluptate! Cumque aspernatur aut sit impedit corporis ea quod, natus odio exercitationem! A, consequatur aperiam expedita repudiandae modi culpa sapiente neque tenetur laboriosam sunt?
+    Ratione numquam, nostrum possimus quasi saepe error accusamus aliquid dolores? Ad amet quibusdam placeat repudiandae saepe deserunt nulla recusandae modi itaque ipsa velit corrupti dolore consequatur veniam quasi, earum natus?
+    Aut iure alias veritatis accusamus vel animi ut est officia quae, ducimus impedit laboriosam sapiente aliquam magni autem quia a nam optio nostrum quisquam eum qui! Debitis sunt molestias cumque.
+    Accusantium voluptatum esse, harum ea distinctio at tempore eius ipsum ab eum provident, illo quo id, quibusdam error fugit eaque totam corporis aspernatur? Nihil perferendis ullam a cupiditate! Molestiae, perferendis?
+    Aliquid ipsum a eaque deleniti doloremque explicabo ad quia debitis, molestias dignissimos laudantium. Itaque quasi at impedit quos sapiente recusandae facilis ratione, maiores repellat debitis! Laborum distinctio quae molestias asperiores.
+    Ut molestias assumenda quas vero temporibus repellat magnam veritatis iure alias laborum autem soluta consectetur quisquam fugit reiciendis corporis similique maxime, atque harum eum voluptates repudiandae! Tempore laudantium doloribus totam!
+    Ad vitae porro excepturi ea perferendis magni dolor, ullam odit suscipit obcaecati soluta vel corporis et dignissimos molestiae corrupti blanditiis! Hic obcaecati perferendis voluptatum fuga quis inventore autem incidunt temporibus?
+    Hic quaerat rerum ducimus officiis iure quia alias dolores sed dolorum eligendi enim amet, assumenda sit autem iusto velit laborum eum voluptas minima ratione aliquid rem nisi nihil! Optio, fuga?
+    Esse provident explicabo mollitia perspiciatis ipsa velit eveniet dolorem. Numquam facilis vel, repudiandae est sint similique autem quae culpa reiciendis quaerat commodi praesentium aliquid. Delectus excepturi quibusdam facilis cupiditate quos!
+    Nostrum fuga nesciunt eos et earum quis repudiandae animi, sit cupiditate, neque possimus distinctio iste voluptates. Quae neque nesciunt pariatur repellendus hic! Laborum tenetur vitae error dolorem incidunt libero quo!
+    Aperiam recusandae ut, rerum quasi magnam adipisci molestias quae, hic libero reiciendis fugiat numquam! In possimus eligendi quisquam perferendis odio earum, nihil, corporis, animi omnis nemo similique asperiores eveniet velit.
+    Magni, illum suscipit ut quidem numquam porro architecto eveniet perspiciatis eligendi temporibus esse, sunt veniam? Deleniti nulla aliquam asperiores? Eius, inventore aspernatur ea quasi optio aliquam corporis cupiditate cumque officia.
+    Magni, illum numquam. Rerum eveniet minima laboriosam quasi ducimus temporibus sed laborum saepe culpa in officia asperiores ipsam nostrum cum a quisquam optio soluta, accusantium itaque vitae assumenda ea sapiente!
+    Qui assumenda vitae ab ullam illum accusantium in corrupti possimus eaque soluta ut, quo laudantium culpa odio adipisci accusamus facilis modi quae laboriosam? Amet, natus pariatur qui delectus repudiandae consequuntur!
+    Eaque eveniet, eius officiis perferendis omnis ipsa nihil dolorum eligendi consequuntur, harum totam, similique earum voluptate eum fugit ea cumque soluta. Ratione obcaecati ipsum id amet labore a, ab natus!
+    Obcaecati at fugit sequi, praesentium ullam veritatis dolorem consequuntur numquam vitae quis aliquam cum aut repellendus nulla officia magni temporibus neque, qui provident nam voluptates recusandae? Distinctio aperiam repudiandae fuga.
+    Ratione id explicabo fugiat rem maiores itaque repellat, eaque repellendus porro eius suscipit aperiam dicta cupiditate eos deleniti? Itaque ratione natus pariatur voluptatem dolores minima sint odio id, perspiciatis molestias!</p></main>
+    <footer>footer</footer>
+    <input type="checkbox" name="" id="toggle" style="display: none" />
+    <div class="overlay">
+        <div class="popup">
+            <h2>Are you sure to close this pop-up ?</h2>
+            <label for="toggle" class="btn">close</label>
+        </div>
+    </div>
+</body>
+</html>
+=========================================lab.html================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBlog</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="navbar" role="banner">
+        <div class="brand">PhotoBlog</div>
+        <nav aria-label="Main navigation">
+         <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+        </nav>
+    </header>
+
+    <section class="hero"style="background-image:url(../../Assets/Images/sky\ image.jpg);">
+        <div class="hero-content">
+            <h1>Capturing Moments,Creating Memories</h1>
+            <p class="lead">Welcome to my Photography Blog. Explore stories told through the lens - nature,portraits,travel and much more. </p>
+        </div>
+    </section>
+
+</body>
+</html>

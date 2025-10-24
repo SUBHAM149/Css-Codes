@@ -1,0 +1,164 @@
+class-13/09/25.
+transform.html
+============================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: aquamarine;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+        color: white;
+        /* moving box w.r.to X-axis */
+        /* transform: translateX(50px); */
+        /* moving box w.r.to Y-axis */
+        /* transform: translateY(100px); */
+        /* short-hand prop for both X and Y direction */
+        /* transform: translate(50px, 100px); */
+        /* for zoom effects use scale() method */
+        /* transform: scale(1.5);
+        transform: scaleX(1.5);
+        transform: scaleY(1.5); */
+      }
+      
+      .box2 {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+  </body>
+</html>
+==========================================loadingAnimation===============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      @keyframes dots {
+        from {
+          transform: translateY(0px);
+          opacity: 0.5;
+        }
+        to {
+          transform: translateY(-20px);
+          opacity: 1;
+        }
+      }
+      div {
+        height: 15px;
+        width: 15px;
+        background-color: white;
+        border-radius: 50%;
+        animation: dots 0.6s infinite alternate;
+      }
+      div:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      div:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      div:first-child::before {
+        /* content: 'loading'; */
+        margin-right: 30px;
+        color: rgb(218, 91, 84);
+        /* position: absolute; */
+        transform: translateX(-50px);
+        left: 80px;
+        font-size: 30px;
+      }
+      article {
+        color: white;
+        font-size: 38px;
+        letter-spacing: 2px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>Loading</article>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>
+=============================================Loading=======================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loading Animation</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #5a5454;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader {
+        width: 60px;
+        height: 60px;
+        /* border: 6px solid ; */
+        border-top: 6px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      span {
+        /* align-items: center;
+        justify-content: center; */
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <span> loading </span>
+  </body>
+</html>
